@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ARegistry -->
+<registry service="testthing">
+    <section title="Testing - Unit tests (0x00nn)">
+        <comment>Example xml</comment>
+           
+        <setting name="Product name" id="0x9afe">
+            <payload_in/>
+            <payload_out>
+                <item type="STRING" name="productName">
+                    <comment>
+                        product name
+                    </comment>
+                </item>
+            </payload_out>
+        </setting>
+		
+        <command name="Set Ringtone" id="0x0F02">
+            <payload_in>
+                <item name="interfaceType" type="BYTE">
+                </item>
+                <item name="ringTone" type="BYTE">
+                    <comment>The ring tone to set, a value in the range [0..2] inclusive.</comment>
+                </item>
+            </payload_in>
+            <payload_out/>
+        </command>
+
+        <event name="state changed" id="0x0200">
+            <payload_out>
+                <item type="BOOLEAN" name="Worn">
+                    <comment>
+                        True if the device is worn, false otherwise.
+                    </comment>
+                </item>
+            </payload_out>
+        </event>
+
+	</section>
+</registry>
+		
